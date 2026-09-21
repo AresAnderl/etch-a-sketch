@@ -76,7 +76,9 @@ const addRGBOrDarkness = (event) => {
 
 const buttonClick = () => {
   const number = Number(prompt("select your number"));
-  createGrid(number);
+  if (number > 0 && number <= 100) {
+    createGrid(number);
+  }
 };
 
 squareGrid.addEventListener("mouseover", addRGBOrDarkness);
